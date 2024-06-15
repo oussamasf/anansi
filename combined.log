@@ -1,0 +1,33 @@
+2024-06-15T00:27:48.397Z info: Notification Service running on port 4000
+2024-06-15T00:27:48.398Z info: WebSocket Server running on port 8080
+2024-06-15T00:27:48.402Z error: Redis Client Error: AggregateError
+2024-06-15T00:27:48.405Z error: Redis Client Error: AggregateError
+2024-06-15T00:27:48.458Z error: Redis Client Error: AggregateError
+2024-06-15T00:27:48.560Z error: Redis Client Error: AggregateError
+2024-06-15T00:27:48.715Z error: Redis Client Error: AggregateError
+2024-06-15T00:27:48.916Z error: Redis Client Error: AggregateError
+2024-06-15T00:27:49.169Z error: Redis Client Error: AggregateError
+2024-06-15T00:27:49.474Z error: Redis Client Error: AggregateError
+2024-06-15T00:27:49.827Z error: Redis Client Error: AggregateError
+2024-06-15T00:27:50.232Z error: Redis Client Error: AggregateError
+2024-06-15T00:27:50.684Z error: Redis Client Error: AggregateError
+2024-06-15T00:27:51.189Z error: Redis Client Error: AggregateError
+2024-06-15T00:27:51.692Z error: Redis Client Error: AggregateError
+2024-06-15T00:27:52.194Z error: Redis Client Error: AggregateError
+2024-06-15T00:30:21.673Z info: Notification Service running on port 4000
+2024-06-15T00:30:21.674Z info: WebSocket Server running on port 8080
+2024-06-15T00:30:21.678Z error: Redis Client Error: AggregateError
+2024-06-15T00:30:21.680Z error: Redis Client Error: AggregateError
+2024-06-15T00:30:21.733Z error: Redis Client Error: AggregateError
+2024-06-15T00:30:21.836Z error: Redis Client Error: AggregateError
+2024-06-15T00:30:21.990Z error: Redis Client Error: AggregateError
+2024-06-15T00:30:22.198Z error: Redis Client Error: AggregateError
+2024-06-15T00:30:22.453Z error: Redis Client Error: AggregateError
+2024-06-15T00:30:22.761Z error: Redis Client Error: AggregateError
+2024-06-15T00:30:23.114Z error: Redis Client Error: AggregateError
+2024-06-15T00:30:23.518Z error: Redis Client Error: AggregateError
+2024-06-15T00:30:23.975Z error: Redis Client Error: AggregateError
+2024-06-15T00:30:24.482Z error: Redis Client Error: AggregateError
+2024-06-15T00:30:24.989Z error: Redis Client Error: AggregateError
+2024-06-15T00:30:44.058Z info: Notification Service running on port 4000
+2024-06-15T00:30:44.059Z info: WebSocket Server running on port 8080
