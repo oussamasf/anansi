@@ -207,3 +207,40 @@
 2024-06-15T23:30:52.078Z info: Client connected: 1516239022
 2024-06-15T23:30:56.461Z info: Client disconnected: 1516239022
 2024-06-15T23:31:08.710Z info: Client connected: 1516239022
+2024-06-15T23:35:44.584Z info: WebSocket Server running on port 8080
+2024-06-15T23:35:44.587Z info: Notification Service running on port 4000
+2024-06-15T23:35:44.597Z info: MongoDB connected
+2024-06-15T23:35:50.742Z info: Client connected: 1516239022
+2024-06-15T23:36:44.174Z info: Client disconnected: 1516239022
+2024-06-15T23:36:49.282Z info: Client connected: 1516239022
+2024-06-15T23:37:06.106Z info: Client disconnected: 1516239022
+2024-06-15T23:37:13.738Z info: Client connected: 1516239022
+2024-06-15T23:39:28.473Z info: WebSocket Server running on port 8080
+2024-06-15T23:39:28.480Z info: Notification Service running on port 4000
+2024-06-15T23:39:28.495Z info: MongoDB connected
+2024-06-15T23:42:14.862Z info: WebSocket Server running on port 8080
+2024-06-15T23:42:14.870Z info: Notification Service running on port 4000
+2024-06-15T23:42:14.887Z info: MongoDB connected
+2024-06-15T23:44:00.746Z info: WebSocket Server running on port 8080
+2024-06-15T23:44:00.749Z info: Notification Service running on port 4000
+2024-06-15T23:44:00.756Z info: MongoDB connected
+2024-06-15T23:44:49.521Z info: WebSocket Server running on port 8080
+2024-06-15T23:44:49.524Z info: Notification Service running on port 4000
+2024-06-15T23:44:49.537Z info: MongoDB connected
+2024-06-15T23:45:22.605Z info: WebSocket Server running on port 8080
+2024-06-15T23:45:22.608Z info: Notification Service running on port 4000
+2024-06-15T23:45:22.617Z info: MongoDB connected
+2024-06-15T23:48:15.298Z info: WebSocket Server running on port 8080
+2024-06-15T23:48:15.301Z info: Notification Service running on port 4000
+2024-06-15T23:48:15.310Z info: MongoDB connected
+2024-06-15T23:48:25.488Z info: Client connected: 1516239022
+2024-06-15T23:49:26.100Z info: WebSocket Server running on port 8080
+2024-06-15T23:49:26.104Z info: Notification Service running on port 4000
+2024-06-15T23:49:26.112Z info: MongoDB connected
+2024-06-15T23:49:38.251Z info: WebSocket Server running on port 8080
+2024-06-15T23:49:38.255Z info: Notification Service running on port 4000
+2024-06-15T23:49:38.266Z info: MongoDB connected
+2024-06-15T23:49:44.682Z info: Client connected: 1516239022
+2024-06-15T23:51:08.171Z info: WebSocket Server running on port 8080
+2024-06-15T23:51:08.174Z info: Notification Service running on port 4000
+2024-06-15T23:51:08.186Z info: MongoDB connected

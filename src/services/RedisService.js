@@ -30,6 +30,31 @@ class RedisService {
       return null;
     }
   }
+
+  async storeClientConnection(userId) {
+    try {
+      await this.client.set(`ws:${userId}`, userId);
+    } catch (error) {
+      logger.error(`Error storing client connection: ${error}`);
+    }
+  }
+
+  async getClientConnection(userId) {
+    try {
+      return await this.client.get(`ws:${userId}`);
+    } catch (error) {
+      logger.error(`Error retrieving client connection: ${error}`);
+      return null;
+    }
+  }
+
+  async removeClientConnection(userId) {
+    try {
+      await this.client.del(`ws:${userId}`);
+    } catch (error) {
+      logger.error(`Error removing client connection: ${error}`);
+    }
+  }
 }
 
 module.exports = new RedisService();

@@ -3,6 +3,7 @@ const jwt = require("jsonwebtoken");
 const { JWT_SECRET } = require("../config");
 const logger = require("../utils/Logger");
 const notificationService = require("./notificationService");
+const redisService = require("./redisService");
 
 class WebSocketService {
   constructor() {
@@ -37,7 +38,7 @@ class WebSocketService {
         }
 
         const userId = decoded.userId;
-        this.clients.set(userId, ws);
+        await redisService.storeClientConnection(userId);
         logger.info(`Client connected: ${userId}`);
 
         const unreadNotifications =
@@ -51,7 +52,7 @@ class WebSocketService {
         ws.on("message", (message) => {});
 
         ws.on("close", () => {
-          this.clients.delete(userId);
+          redisService.removeClientConnection(userId);
           logger.info(`Client disconnected: ${userId}`);
         });
       });
@@ -68,11 +69,15 @@ class WebSocketService {
     return authHeader;
   }
 
-  sendMessage(userId, message) {
-    const client = this.clients.get(userId);
-    if (client && client.readyState === WebSocket.OPEN) {
-      client.send(JSON.stringify({ message }));
-      return true;
+  async sendMessage(userId, message) {
+    const wsId = await redisService.getClientConnection(userId);
+    if (wsId) {
+      this.server.clients.forEach((client) => {
+        if (client.readyState === WebSocket.OPEN) {
+          client.send(JSON.stringify({ message }));
+          return true;
+        }
+      });
     }
     return false;
   }
