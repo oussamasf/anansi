@@ -31,3 +31,179 @@
 2024-06-15T00:30:24.989Z error: Redis Client Error: AggregateError
 2024-06-15T00:30:44.058Z info: Notification Service running on port 4000
 2024-06-15T00:30:44.059Z info: WebSocket Server running on port 8080
+2024-06-15T22:56:58.101Z info: WebSocket Server running on port 8080
+2024-06-15T22:56:58.104Z info: Notification Service running on port 4000
+2024-06-15T22:56:58.107Z error: Redis Client Error: AggregateError
+2024-06-15T22:56:58.111Z error: Redis Client Error: AggregateError
+2024-06-15T22:56:58.163Z error: Redis Client Error: AggregateError
+2024-06-15T22:56:58.265Z error: Redis Client Error: AggregateError
+2024-06-15T22:56:58.417Z error: Redis Client Error: AggregateError
+2024-06-15T22:56:58.620Z error: Redis Client Error: AggregateError
+2024-06-15T22:56:58.872Z error: Redis Client Error: AggregateError
+2024-06-15T22:56:59.175Z error: Redis Client Error: AggregateError
+2024-06-15T22:56:59.528Z error: Redis Client Error: AggregateError
+2024-06-15T22:56:59.934Z error: Redis Client Error: AggregateError
+2024-06-15T22:57:00.392Z error: Redis Client Error: AggregateError
+2024-06-15T22:57:00.897Z error: Redis Client Error: AggregateError
+2024-06-15T22:57:01.403Z error: Redis Client Error: AggregateError
+2024-06-15T22:57:01.905Z error: Redis Client Error: AggregateError
+2024-06-15T22:57:02.409Z error: Redis Client Error: AggregateError
+2024-06-15T22:57:02.915Z error: Redis Client Error: AggregateError
+2024-06-15T22:57:03.419Z error: Redis Client Error: AggregateError
+2024-06-15T22:57:03.923Z error: Redis Client Error: AggregateError
+2024-06-15T22:57:04.441Z error: Redis Client Error: AggregateError
+2024-06-15T22:57:04.945Z error: Redis Client Error: AggregateError
+2024-06-15T22:57:05.449Z error: Redis Client Error: AggregateError
+2024-06-15T22:57:05.953Z error: Redis Client Error: AggregateError
+2024-06-15T22:57:06.457Z error: Redis Client Error: AggregateError
+2024-06-15T22:57:06.960Z error: Redis Client Error: AggregateError
+2024-06-15T22:57:07.464Z error: Redis Client Error: AggregateError
+2024-06-15T22:57:07.977Z error: Redis Client Error: AggregateError
+2024-06-15T22:57:08.479Z error: Redis Client Error: AggregateError
+2024-06-15T22:57:08.982Z error: Redis Client Error: AggregateError
+2024-06-15T22:57:09.486Z error: Redis Client Error: AggregateError
+2024-06-15T22:57:09.992Z error: Redis Client Error: AggregateError
+2024-06-15T22:57:10.495Z error: Redis Client Error: AggregateError
+2024-06-15T22:57:10.999Z error: Redis Client Error: AggregateError
+2024-06-15T22:57:11.503Z error: Redis Client Error: AggregateError
+2024-06-15T22:57:12.010Z error: Redis Client Error: AggregateError
+2024-06-15T22:57:12.512Z error: Redis Client Error: AggregateError
+2024-06-15T22:57:13.015Z error: Redis Client Error: AggregateError
+2024-06-15T22:57:13.519Z error: Redis Client Error: AggregateError
+2024-06-15T22:57:14.023Z error: Redis Client Error: AggregateError
+2024-06-15T22:57:14.527Z error: Redis Client Error: AggregateError
+2024-06-15T22:57:15.030Z error: Redis Client Error: AggregateError
+2024-06-15T22:57:15.533Z error: Redis Client Error: AggregateError
+2024-06-15T22:57:16.035Z error: Redis Client Error: AggregateError
+2024-06-15T22:57:16.538Z error: Redis Client Error: AggregateError
+2024-06-15T22:57:18.279Z info: MongoDB connected
+2024-06-15T22:57:29.551Z info: WebSocket Server running on port 8080
+2024-06-15T22:57:29.553Z info: Notification Service running on port 4000
+2024-06-15T22:57:29.561Z info: MongoDB connected
+2024-06-15T22:58:37.704Z info: WebSocket Server running on port 8080
+2024-06-15T22:58:39.722Z info: Notification Service running on port 4000
+2024-06-15T22:58:39.724Z error: Redis Client Error: Error: Connection timeout
+2024-06-15T22:58:39.747Z info: MongoDB connected
+2024-06-15T22:59:46.884Z info: WebSocket Server running on port 8080
+2024-06-15T22:59:46.890Z info: Notification Service running on port 4000
+2024-06-15T22:59:46.909Z info: MongoDB connected
+2024-06-15T23:02:05.960Z info: WebSocket Server running on port 8080
+2024-06-15T23:02:05.964Z info: Notification Service running on port 4000
+2024-06-15T23:02:05.974Z info: MongoDB connected
+2024-06-15T23:02:47.367Z info: WebSocket Server running on port 8080
+2024-06-15T23:02:47.369Z info: Notification Service running on port 4000
+2024-06-15T23:02:47.379Z info: MongoDB connected
+2024-06-15T23:02:49.805Z info: WebSocket Server running on port 8080
+2024-06-15T23:02:49.808Z info: Notification Service running on port 4000
+2024-06-15T23:02:49.817Z info: MongoDB connected
+2024-06-15T23:05:38.103Z info: WebSocket Server running on port 8080
+2024-06-15T23:05:38.106Z info: Notification Service running on port 4000
+2024-06-15T23:05:38.117Z info: MongoDB connected
+2024-06-15T23:05:53.438Z info: WebSocket Server running on port 8080
+2024-06-15T23:05:53.441Z info: Notification Service running on port 4000
+2024-06-15T23:05:53.453Z info: MongoDB connected
+2024-06-15T23:06:00.089Z info: WebSocket Server running on port 8080
+2024-06-15T23:06:00.093Z info: Notification Service running on port 4000
+2024-06-15T23:06:00.102Z info: MongoDB connected
+2024-06-15T23:06:02.596Z info: WebSocket Server running on port 8080
+2024-06-15T23:06:02.598Z info: Notification Service running on port 4000
+2024-06-15T23:06:02.607Z info: MongoDB connected
+2024-06-15T23:06:23.815Z info: Client connected: undefined
+2024-06-15T23:06:44.614Z info: WebSocket Server running on port 8080
+2024-06-15T23:06:44.617Z info: Notification Service running on port 4000
+2024-06-15T23:06:44.626Z info: MongoDB connected
+2024-06-15T23:07:07.535Z info: Client connected: undefined
+2024-06-15T23:07:33.073Z info: WebSocket Server running on port 8080
+2024-06-15T23:07:33.076Z info: Notification Service running on port 4000
+2024-06-15T23:07:33.084Z info: MongoDB connected
+2024-06-15T23:07:57.230Z info: WebSocket Server running on port 8080
+2024-06-15T23:07:57.233Z info: Notification Service running on port 4000
+2024-06-15T23:07:57.245Z info: MongoDB connected
+2024-06-15T23:12:12.910Z info: WebSocket Server running on port 8080
+2024-06-15T23:12:12.913Z info: Notification Service running on port 4000
+2024-06-15T23:12:12.922Z info: MongoDB connected
+2024-06-15T23:12:24.984Z info: Client connected: 1516239022
+2024-06-15T23:13:37.333Z info: Client disconnected: 1516239022
+2024-06-15T23:13:40.339Z info: Client connected: 1516239022
+2024-06-15T23:14:16.841Z info: WebSocket Server running on port 8080
+2024-06-15T23:14:16.844Z info: Notification Service running on port 4000
+2024-06-15T23:14:16.854Z info: MongoDB connected
+2024-06-15T23:14:30.630Z info: WebSocket Server running on port 8080
+2024-06-15T23:14:30.633Z info: Notification Service running on port 4000
+2024-06-15T23:14:30.642Z info: MongoDB connected
+2024-06-15T23:15:43.975Z info: WebSocket Server running on port 8080
+2024-06-15T23:15:43.978Z info: Notification Service running on port 4000
+2024-06-15T23:15:43.986Z info: MongoDB connected
+2024-06-15T23:17:46.539Z info: Client connected: 1516239022
+2024-06-15T23:18:01.184Z info: WebSocket Server running on port 8080
+2024-06-15T23:18:01.187Z info: Notification Service running on port 4000
+2024-06-15T23:18:01.198Z info: MongoDB connected
+2024-06-15T23:18:03.336Z info: Client connected: 1516239022
+2024-06-15T23:20:50.480Z info: WebSocket Server running on port 8080
+2024-06-15T23:20:50.484Z info: Notification Service running on port 4000
+2024-06-15T23:20:50.498Z info: MongoDB connected
+2024-06-15T23:20:59.090Z info: Client connected: 1516239022
+2024-06-15T23:21:27.785Z info: WebSocket Server running on port 8080
+2024-06-15T23:21:27.793Z info: Notification Service running on port 4000
+2024-06-15T23:21:27.795Z error: Redis Client Error: Error: Connection timeout
+2024-06-15T23:21:27.814Z info: MongoDB connected
+2024-06-15T23:21:30.784Z info: Client connected: 1516239022
+2024-06-15T23:21:38.758Z info: WebSocket Server running on port 8080
+2024-06-15T23:21:38.776Z info: Notification Service running on port 4000
+2024-06-15T23:21:38.811Z info: MongoDB connected
+2024-06-15T23:21:49.411Z info: Client connected: 1516239022
+2024-06-15T23:22:59.793Z info: WebSocket Server running on port 8080
+2024-06-15T23:22:59.796Z info: Notification Service running on port 4000
+2024-06-15T23:22:59.808Z info: MongoDB connected
+2024-06-15T23:23:18.808Z info: WebSocket Server running on port 8080
+2024-06-15T23:23:18.811Z info: Notification Service running on port 4000
+2024-06-15T23:23:18.820Z info: MongoDB connected
+2024-06-15T23:23:29.390Z info: WebSocket Server running on port 8080
+2024-06-15T23:23:29.394Z info: Notification Service running on port 4000
+2024-06-15T23:23:29.405Z info: MongoDB connected
+2024-06-15T23:23:31.288Z info: Client connected: 1516239022
+2024-06-15T23:23:52.216Z info: WebSocket Server running on port 8080
+2024-06-15T23:23:52.219Z info: Notification Service running on port 4000
+2024-06-15T23:23:52.229Z info: MongoDB connected
+2024-06-15T23:23:57.371Z info: WebSocket Server running on port 8080
+2024-06-15T23:23:57.374Z info: Notification Service running on port 4000
+2024-06-15T23:23:57.382Z info: MongoDB connected
+2024-06-15T23:24:05.221Z info: WebSocket Server running on port 8080
+2024-06-15T23:24:05.225Z info: Notification Service running on port 4000
+2024-06-15T23:24:05.235Z info: MongoDB connected
+2024-06-15T23:24:15.115Z info: WebSocket Server running on port 8080
+2024-06-15T23:24:15.119Z info: Notification Service running on port 4000
+2024-06-15T23:24:15.131Z info: MongoDB connected
+2024-06-15T23:24:17.093Z info: WebSocket Server running on port 8080
+2024-06-15T23:24:17.096Z info: Notification Service running on port 4000
+2024-06-15T23:24:17.105Z info: MongoDB connected
+2024-06-15T23:24:57.376Z info: WebSocket Server running on port 8080
+2024-06-15T23:24:57.379Z info: Notification Service running on port 4000
+2024-06-15T23:24:57.391Z info: MongoDB connected
+2024-06-15T23:25:08.143Z info: Client connected: 1516239022
+2024-06-15T23:25:21.227Z info: Client disconnected: 1516239022
+2024-06-15T23:25:45.849Z info: Client connected: 1516239022
+2024-06-15T23:27:52.210Z info: WebSocket Server running on port 8080
+2024-06-15T23:27:52.213Z info: Notification Service running on port 4000
+2024-06-15T23:27:52.225Z info: MongoDB connected
+2024-06-15T23:28:32.200Z info: WebSocket Server running on port 8080
+2024-06-15T23:28:32.204Z info: Notification Service running on port 4000
+2024-06-15T23:28:32.214Z info: MongoDB connected
+2024-06-15T23:28:41.977Z info: WebSocket Server running on port 8080
+2024-06-15T23:28:41.981Z info: Notification Service running on port 4000
+2024-06-15T23:28:41.990Z info: MongoDB connected
+2024-06-15T23:29:19.780Z info: WebSocket Server running on port 8080
+2024-06-15T23:29:19.782Z info: Notification Service running on port 4000
+2024-06-15T23:29:19.794Z info: MongoDB connected
+2024-06-15T23:29:41.670Z info: Client connected: 1516239022
+2024-06-15T23:30:18.252Z info: WebSocket Server running on port 8080
+2024-06-15T23:30:18.255Z info: Notification Service running on port 4000
+2024-06-15T23:30:18.264Z info: MongoDB connected
+2024-06-15T23:30:26.763Z info: WebSocket Server running on port 8080
+2024-06-15T23:30:26.767Z info: Notification Service running on port 4000
+2024-06-15T23:30:26.775Z info: MongoDB connected
+2024-06-15T23:30:45.870Z info: Client connected: 1516239022
+2024-06-15T23:30:50.379Z info: Client disconnected: 1516239022
+2024-06-15T23:30:52.078Z info: Client connected: 1516239022
+2024-06-15T23:30:56.461Z info: Client disconnected: 1516239022
+2024-06-15T23:31:08.710Z info: Client connected: 1516239022

@@ -14,6 +14,7 @@ const notificationSchema = new mongoose.Schema({
     enum: ["sent", "delivered", "read"],
     default: "sent",
   },
+
   timestamp: {
     type: Date,
     default: Date.now,

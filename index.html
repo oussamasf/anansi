@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebSocket Client</title>
+</head>
+
+<body>
+  <h1>WebSocket Client</h1>
+  <input type="text" id="username" placeholder="Username">
+  <input type="password" id="password" placeholder="Password">
+  <button onclick="register()">Register</button>
+  <button onclick="login()">Login</button>
+  <br><br>
+  <input type="text" id="messageInput" placeholder="Type a message">
+  <button onclick="sendMessage()">Send Message</button>
+  <ul id="messages"></ul>
+
+  <script>
+    let socket;
+    let token;
+
+    function register() {
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      fetch('/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username, password }),
+      }).then(response => response.text())
+        .then(data => alert(data));
+    }
+
+    function login() {
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      fetch('/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username, password }),
+      })
+        .then(response => response.json())
+        .then(data => {
+          token = data.token;
+          connectWebSocket();
+        })
+        .catch(error => alert('Login failed'));
+    }
+
+    function connectWebSocket() {
+      socket = new WebSocket('ws://localhost:8080');
+      socket.addEventListener('open', () => {
+        socket.send(JSON.stringify({ type: 'authenticate', token: token }));
+        console.log('WebSocket connection established');
+      });
+
+      socket.addEventListener('message', (event) => {
+        const messages = document.getElementById('messages');
+        const message = document.createElement('li');
+        message.textContent = event.data;
+        messages.appendChild(message);
+      });
+
+      socket.addEventListener('close', () => {
+        console.log('WebSocket connection closed');
+      });
+    }
+
+    function sendMessage() {
+      const messageInput = document.getElementById('messageInput');
+      const message = messageInput.value;
+
+      fetch('/notify', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`
+        },
+        body: JSON.stringify({ userId: 'user-id-placeholder', message }),
+      }).then(() => {
+        messageInput.value = '';
+      });
+    }
+  </script>
+</body>
+
+</html>
