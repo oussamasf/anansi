@@ -1,30 +1,31 @@
-const redis = require("redis");
-const logger = require("../utils/logger");
-const { REDIS_URL } = require("../config");
+const Notification = require("../models/Notification");
+const redisService = require("./RedisService");
+const webSocketService = require("./WebSocketService");
 
-const client = redis.createClient({ url: REDIS_URL });
+class NotificationService {
+  async sendNotification(userId, message) {
+    const notification = new Notification({ userId, message });
+    const sent = webSocketService.sendMessage(userId, message);
 
-client.on("error", (err) => logger.error(`Redis Client Error: ${err}`));
-client.connect();
+    if (sent) {
+      notification.status = "delivered";
+    }
 
-const saveNotification = async (userId, message) => {
-  try {
-    await client.lPush(`notifications:${userId}`, message);
-  } catch (error) {
-    logger.error(`Error saving notification: ${error}`);
+    await notification.save();
+    await redisService.cacheNotification(notification);
+    return sent;
   }
-};
 
-const getNotifications = async (userId) => {
-  try {
-    return await client.lRange(`notifications:${userId}`, 0, -1);
-  } catch (error) {
-    logger.error(`Error fetching notifications: ${error}`);
-    return [];
+  async getNotifications(userId) {
+    let notifications = await redisService.getCachedNotifications(userId);
+    if (!notifications) {
+      notifications = await Notification.find({ userId }).sort({
+        timestamp: -1,
+      });
+      await redisService.cacheNotification({ userId, notifications });
+    }
+    return notifications;
   }
-};
+}
 
-module.exports = {
-  saveNotification,
-  getNotifications,
-};
+module.exports = new NotificationService();

@@ -1,29 +1,33 @@
-const {
-  saveNotification,
-  getNotifications,
-} = require("../services/notificationService");
-const logger = require("../utils/logger");
+const notificationService = require("../services/notificationService");
+const logger = require("../utils/Logger");
+class NotificationController {
+  constructor() {}
+  async sendNotification(req, res) {
+    const { userId, message } = req.body;
+    try {
+      const sent = await notificationService.sendNotification(userId, message);
 
-const sendNotification = async (req, res) => {
-  const { userId, message } = req.body;
-  const client = req.app.get("wsClients").get(userId);
-
-  if (client && client.readyState === client.OPEN) {
-    client.send(JSON.stringify({ message }));
-    await saveNotification(userId, message);
-    res.status(200).send("Notification sent");
-  } else {
-    res.status(404).send("User not connected");
+      if (sent) {
+        res.status(200).send("Notification sent");
+      } else {
+        res.status(404).send("User not connected");
+      }
+    } catch (error) {
+      logger.error(`Error sending notification: ${error}`);
+      res.status(500).send("Internal Server Error");
+    }
   }
-};
 
-const fetchNotifications = async (req, res) => {
-  const { userId } = req.params;
-  const notifications = await getNotifications(userId);
-  res.json(notifications);
-};
+  async fetchNotifications(req, res) {
+    const { userId } = req.params;
+    try {
+      const notifications = await notificationService.getNotifications(userId);
+      res.json(notifications);
+    } catch (error) {
+      logger.error(`Error fetching notifications: ${error}`);
+      res.status(500).send("Internal Server Error");
+    }
+  }
+}
 
-module.exports = {
-  sendNotification,
-  fetchNotifications,
-};
+module.exports = new NotificationController();

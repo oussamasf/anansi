@@ -1,32 +1,27 @@
 const express = require("express");
-const { WebSocketServer } = require("ws");
 const { PORT, WS_PORT } = require("./config");
-const logger = require("./utils/logger");
-const notificationController = require("./controllers/notificationController");
+const logger = require("./utils/Logger");
+const connectDB = require("./utils/db");
+const notificationController = require("./controllers/NotificationController");
+const webSocketService = require("./services/WebSocketService");
 
 const app = express();
 app.use(express.json());
 
-// WebSocket Server
-const wss = new WebSocketServer({ port: WS_PORT });
-const wsClients = new Map();
+// Connect to MongoDB
+connectDB();
 
-wss.on("connection", (ws, req) => {
-  const userId = req.url.split("/").pop();
-  wsClients.set(userId, ws);
-
-  ws.on("close", () => {
-    wsClients.delete(userId);
-  });
-});
-
-app.set("wsClients", wsClients);
+// Start WebSocket Server
+webSocketService.start(WS_PORT);
 
 // Routes
-app.post("/notify", notificationController.sendNotification);
-app.get("/notifications/:userId", notificationController.fetchNotifications);
+app.post("/notify", (req, res) =>
+  notificationController.sendNotification(req, res)
+);
+app.get("/notifications/:userId", (req, res) =>
+  notificationController.fetchNotifications(req, res)
+);
 
 app.listen(PORT, () => {
   logger.info(`Notification Service running on port ${PORT}`);
-  logger.info(`WebSocket Server running on port ${WS_PORT}`);
 });
