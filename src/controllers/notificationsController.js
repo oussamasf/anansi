@@ -2,11 +2,17 @@ const notificationServer = require("../services/notificationServer");
 const logger = require("../utils/Logger");
 
 class NotificationController {
-  constructor() {}
+  constructor(notificationServer) {
+    this.notificationServer = notificationServer;
+  }
+
   async sendNotification(req, res) {
     const { userId, message } = req.body;
     try {
-      const sent = await notificationServer.sendNotification(userId, message);
+      const sent = await this.notificationServer.sendNotification(
+        userId,
+        message
+      );
 
       if (sent) {
         res.status(200).send("Notification sent");
@@ -22,7 +28,9 @@ class NotificationController {
   async fetchNotifications(req, res) {
     const { userId } = req.params;
     try {
-      const notifications = await notificationServer.getNotifications(userId);
+      const notifications = await this.notificationServer.getNotifications(
+        userId
+      );
       res.json(notifications);
     } catch (error) {
       logger.error(`Error fetching notifications: ${error}`);
@@ -31,4 +39,4 @@ class NotificationController {
   }
 }
 
-module.exports = new NotificationController();
+module.exports = new NotificationController(notificationServer);
