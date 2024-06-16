@@ -244,3 +244,136 @@
 2024-06-15T23:51:08.171Z info: WebSocket Server running on port 8080
 2024-06-15T23:51:08.174Z info: Notification Service running on port 4000
 2024-06-15T23:51:08.186Z info: MongoDB connected
+2024-06-16T00:01:10.231Z info: WebSocket Server running on port 8080
+2024-06-16T00:01:10.234Z info: Notification Service running on port 4000
+2024-06-16T00:01:10.245Z info: MongoDB connected
+2024-06-16T00:01:39.619Z info: WebSocket Server running on port 8080
+2024-06-16T00:01:39.622Z info: Notification Service running on port 4000
+2024-06-16T00:01:39.633Z info: MongoDB connected
+2024-06-16T00:01:45.116Z info: Client connected: 1516239022
+2024-06-16T00:02:38.470Z info: WebSocket Server running on port 8080
+2024-06-16T00:02:38.477Z info: Notification Service running on port 4000
+2024-06-16T00:02:38.494Z info: MongoDB connected
+2024-06-16T00:02:45.085Z info: Client connected: 1516239022
+2024-06-16T00:04:36.650Z info: WebSocket Server running on port 8080
+2024-06-16T00:04:36.657Z info: Notification Service running on port 4000
+2024-06-16T00:04:36.675Z info: MongoDB connected
+2024-06-16T00:04:40.344Z info: Client connected: 1516239022
+2024-06-16T00:05:36.695Z info: WebSocket Server running on port 8080
+2024-06-16T00:05:36.701Z info: Notification Service running on port 4000
+2024-06-16T00:05:36.719Z info: MongoDB connected
+2024-06-16T00:05:47.116Z info: Client connected: 1516239022
+2024-06-16T00:06:44.934Z info: WebSocket Server running on port 8080
+2024-06-16T00:06:44.939Z info: Notification Service running on port 4000
+2024-06-16T00:06:44.940Z error: Redis Client Error: Error: Connection timeout
+2024-06-16T00:06:44.957Z info: MongoDB connected
+2024-06-16T00:06:53.589Z info: WebSocket Server running on port 8080
+2024-06-16T00:06:53.592Z info: Notification Service running on port 4000
+2024-06-16T00:06:53.603Z info: MongoDB connected
+2024-06-16T00:07:02.030Z info: Client connected: 1516239022
+2024-06-16T00:07:41.292Z info: WebSocket Server running on port 8080
+2024-06-16T00:07:41.296Z info: Notification Service running on port 4000
+2024-06-16T00:07:41.305Z info: MongoDB connected
+2024-06-16T00:07:54.220Z info: Client connected: 1516239022
+2024-06-16T00:08:09.011Z info: WebSocket Server running on port 8080
+2024-06-16T00:08:09.018Z info: Notification Service running on port 4000
+2024-06-16T00:08:09.020Z error: Redis Client Error: Error: Connection timeout
+2024-06-16T00:08:09.038Z info: MongoDB connected
+2024-06-16T00:08:47.245Z info: WebSocket Server running on port 8080
+2024-06-16T00:08:47.253Z info: Notification Service running on port 4000
+2024-06-16T00:08:47.255Z error: Redis Client Error: Error: Connection timeout
+2024-06-16T00:08:47.274Z info: MongoDB connected
+2024-06-16T00:09:10.189Z info: WebSocket Server running on port 8080
+2024-06-16T00:09:10.195Z info: Notification Service running on port 4000
+2024-06-16T00:09:10.196Z error: Redis Client Error: Error: Connection timeout
+2024-06-16T00:09:10.209Z info: MongoDB connected
+2024-06-16T00:09:13.477Z info: Client connected: 1516239022
+2024-06-16T00:09:38.589Z info: WebSocket Server running on port 8080
+2024-06-16T00:09:38.592Z info: Notification Service running on port 4000
+2024-06-16T00:09:38.602Z info: MongoDB connected
+2024-06-16T00:10:28.344Z info: WebSocket Server running on port 8080
+2024-06-16T00:10:28.347Z info: Notification Service running on port 4000
+2024-06-16T00:10:28.358Z info: MongoDB connected
+2024-06-16T00:11:10.435Z info: WebSocket Server running on port 8080
+2024-06-16T00:11:10.437Z info: Notification Service running on port 4000
+2024-06-16T00:11:10.445Z info: MongoDB connected
+2024-06-16T00:11:29.276Z info: Client connected: 1516239022
+2024-06-16T00:11:57.802Z info: WebSocket Server running on port 8080
+2024-06-16T00:11:57.805Z info: Notification Service running on port 4000
+2024-06-16T00:11:57.815Z info: MongoDB connected
+2024-06-16T00:12:37.433Z info: WebSocket Server running on port 8080
+2024-06-16T00:12:37.436Z info: Notification Service running on port 4000
+2024-06-16T00:12:37.437Z error: Redis Client Error: Error: Connection timeout
+2024-06-16T00:12:37.448Z info: MongoDB connected
+2024-06-16T00:14:00.356Z info: WebSocket Server running on port 8080
+2024-06-16T00:14:00.360Z info: Notification Service running on port 4000
+2024-06-16T00:14:00.362Z error: Redis Client Error: Error: Connection timeout
+2024-06-16T00:14:00.373Z info: MongoDB connected
+2024-06-16T00:14:05.799Z info: Client connected: 1516239022
+2024-06-16T00:36:17.995Z info: WebSocket Server running on port 8080
+2024-06-16T00:36:17.998Z info: Notification Service running on port 4000
+2024-06-16T00:36:18.007Z info: MongoDB connected
+2024-06-16T00:36:25.912Z info: WebSocket Server running on port 8080
+2024-06-16T00:36:25.914Z info: Notification Service running on port 4000
+2024-06-16T00:36:25.925Z info: MongoDB connected
+2024-06-16T00:36:40.500Z info: Client connected: 1
+2024-06-16T00:38:48.204Z info: WebSocket Server running on port 8080
+2024-06-16T00:38:48.208Z info: Notification Service running on port 4000
+2024-06-16T00:38:48.209Z error: Redis Client Error: Error: Connection timeout
+2024-06-16T00:38:48.220Z info: MongoDB connected
+2024-06-16T00:39:12.334Z info: WebSocket Server running on port 8080
+2024-06-16T00:39:12.339Z info: Notification Service running on port 4000
+2024-06-16T00:39:12.341Z error: Redis Client Error: Error: Connection timeout
+2024-06-16T00:39:12.354Z info: MongoDB connected
+2024-06-16T00:41:27.788Z info: WebSocket Server running on port 8080
+2024-06-16T00:41:27.792Z info: Notification Service running on port 4000
+2024-06-16T00:41:27.800Z info: MongoDB connected
+2024-06-16T00:42:54.408Z info: WebSocket Server running on port 8080
+2024-06-16T00:42:54.415Z info: Notification Service running on port 4000
+2024-06-16T00:42:54.427Z info: MongoDB connected
+2024-06-16T00:43:01.587Z info: Client connected: 1
+2024-06-16T00:43:22.584Z info: WebSocket Server running on port 8080
+2024-06-16T00:43:22.590Z info: Notification Service running on port 4000
+2024-06-16T00:43:22.644Z info: MongoDB connected
+2024-06-16T00:43:24.771Z info: Client connected: 1
+2024-06-16T00:43:51.338Z info: Client disconnected: 1
+2024-06-16T00:43:58.093Z info: WebSocket Server running on port 8080
+2024-06-16T00:43:58.096Z info: Notification Service running on port 4000
+2024-06-16T00:43:58.106Z info: MongoDB connected
+2024-06-16T00:44:15.993Z info: WebSocket Server running on port 8080
+2024-06-16T00:44:22.655Z info: Notification Service running on port 4000
+2024-06-16T00:44:22.671Z error: Redis Client Error: Error: Connection timeout
+2024-06-16T00:44:26.042Z info: MongoDB connected
+2024-06-16T00:45:15.950Z info: WebSocket Server running on port 8080
+2024-06-16T00:45:15.957Z info: Notification Service running on port 4000
+2024-06-16T00:45:15.973Z info: MongoDB connected
+2024-06-16T00:45:22.271Z info: Client connected: 1
+2024-06-16T00:52:59.437Z info: WebSocket Server running on port 8080
+2024-06-16T00:52:59.440Z info: Notification Service running on port 4000
+2024-06-16T00:52:59.451Z info: MongoDB connected
+2024-06-16T00:54:40.851Z info: WebSocket Server running on port 8080
+2024-06-16T00:54:40.859Z info: Notification Service running on port 4000
+2024-06-16T00:54:40.861Z error: Redis Client Error: Error: Connection timeout
+2024-06-16T00:54:40.879Z info: MongoDB connected
+2024-06-16T00:55:07.465Z info: WebSocket Server running on port 8080
+2024-06-16T00:55:07.468Z info: Notification Service running on port 4000
+2024-06-16T00:55:07.469Z error: Redis Client Error: Error: Connection timeout
+2024-06-16T00:55:16.096Z error: Redis Client Error: Error: Connection timeout
+2024-06-16T00:55:16.100Z info: MongoDB connected
+2024-06-16T00:55:44.579Z info: WebSocket Server running on port 8080
+2024-06-16T00:55:44.585Z info: Notification Service running on port 4000
+2024-06-16T00:55:44.598Z info: MongoDB connected
+2024-06-16T00:56:22.410Z info: WebSocket Server running on port 8080
+2024-06-16T00:56:22.413Z info: Notification Service running on port 4000
+2024-06-16T00:56:22.421Z info: MongoDB connected
+2024-06-16T00:56:40.906Z info: WebSocket Server running on port 8080
+2024-06-16T00:56:40.909Z info: Notification Service running on port 4000
+2024-06-16T00:56:40.921Z info: MongoDB connected
+2024-06-16T00:57:14.636Z info: WebSocket Server running on port 8080
+2024-06-16T00:57:14.640Z info: Notification Service running on port 4000
+2024-06-16T00:57:14.648Z info: MongoDB connected
+2024-06-16T00:57:24.385Z info: Client connected: 123
+2024-06-16T00:58:15.116Z info: WebSocket Server running on port 8080
+2024-06-16T00:58:15.119Z info: Notification Service running on port 4000
+2024-06-16T00:58:15.130Z info: MongoDB connected
+2024-06-16T00:58:26.860Z info: Client connected: 123

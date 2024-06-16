@@ -1,11 +1,12 @@
-const notificationService = require("../services/notificationService");
+const notificationServer = require("../services/notificationServer");
 const logger = require("../utils/Logger");
+
 class NotificationController {
   constructor() {}
   async sendNotification(req, res) {
     const { userId, message } = req.body;
     try {
-      const sent = await notificationService.sendNotification(userId, message);
+      const sent = await notificationServer.sendNotification(userId, message);
 
       if (sent) {
         res.status(200).send("Notification sent");
@@ -21,7 +22,7 @@ class NotificationController {
   async fetchNotifications(req, res) {
     const { userId } = req.params;
     try {
-      const notifications = await notificationService.getNotifications(userId);
+      const notifications = await notificationServer.getNotifications(userId);
       res.json(notifications);
     } catch (error) {
       logger.error(`Error fetching notifications: ${error}`);

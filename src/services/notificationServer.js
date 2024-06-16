@@ -1,8 +1,20 @@
 const Notification = require("../models/Notification");
 const redisService = require("./redisService");
-const webSocketService = require("./webSocketService");
+const eventBus = require("../utils/eventBus");
 
 class NotificationService {
+  constructor() {
+    eventBus.on("userConnected", this.handleUserConnected.bind(this));
+  }
+
+  async handleUserConnected(userId) {
+    const unreadNotifications = await this.getUnreadNotifications(userId);
+    unreadNotifications.forEach((notification) => {
+      eventBus.emit("sendNotification", userId, notification.message);
+    });
+    await this.markNotificationsAsRead(userId);
+  }
+
   async sendNotification(userId, message) {
     const notification = new Notification({
       userId,
@@ -11,7 +23,10 @@ class NotificationService {
       read: false,
     });
 
-    const sent = webSocketService.sendMessage(userId, message);
+    const sent = await new Promise((resolve) => {
+      eventBus.emit("sendNotification", userId, message, resolve);
+    });
+
     if (sent) {
       notification.status = "delivered";
     }
@@ -22,16 +37,13 @@ class NotificationService {
   }
 
   async getUnreadNotifications(userId) {
-    return await Notification.find({ userId, status: { $ne: "read" } }).sort({
+    return await Notification.find({ userId, read: false }).sort({
       timestamp: -1,
     });
   }
 
   async markNotificationsAsRead(userId) {
-    await Notification.updateMany(
-      { userId, status: { $ne: "read" } },
-      { status: "read" }
-    );
+    await Notification.updateMany({ userId, read: false }, { read: true });
   }
 
   async getNotifications(userId) {
