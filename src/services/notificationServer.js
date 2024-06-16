@@ -1,34 +1,35 @@
 const Notification = require("../models/Notification");
 const redisService = require("./redisService");
 const eventBus = require("../utils/eventBus");
+const { EVENT_BUS, NOTIFICATION_STATUS } = require("../config/constants");
 
 class NotificationService {
-  constructor() {
-    eventBus.on("userConnected", this.handleUserConnected.bind(this));
+  constructor(notificationModel) {
+    eventBus.on(EVENT_BUS.USER_CONNECTED, this.handleUserConnected.bind(this));
+    this.notificationModel = notificationModel;
   }
 
   async handleUserConnected(userId) {
     const unreadNotifications = await this.getUnreadNotifications(userId);
     unreadNotifications.forEach((notification) => {
-      eventBus.emit("sendNotification", userId, notification.message);
+      eventBus.emit(EVENT_BUS.SEND_NOTIFICATION, userId, notification.message);
     });
     await this.markNotificationsAsRead(userId);
   }
 
   async sendNotification(userId, message) {
-    const notification = new Notification({
+    const notification = new this.notificationModel({
       userId,
       message,
-      status: "sent",
-      read: false,
+      status: NOTIFICATION_STATUS.SENT,
     });
 
     const sent = await new Promise((resolve) => {
-      eventBus.emit("sendNotification", userId, message, resolve);
+      eventBus.emit(EVENT_BUS.SEND_NOTIFICATION, userId, message, resolve);
     });
 
     if (sent) {
-      notification.status = "delivered";
+      notification.status = NOTIFICATION_STATUS.DELIVERED;
     }
 
     await notification.save();
@@ -37,19 +38,24 @@ class NotificationService {
   }
 
   async getUnreadNotifications(userId) {
-    return await Notification.find({ userId, read: false }).sort({
-      timestamp: -1,
-    });
+    return await this.notificationModel
+      .find({ userId, status: { $ne: NOTIFICATION_STATUS.READ } })
+      .sort({
+        timestamp: -1,
+      });
   }
 
   async markNotificationsAsRead(userId) {
-    await Notification.updateMany({ userId, read: false }, { read: true });
+    await this.notificationModel.updateMany(
+      { userId, status: { $ne: NOTIFICATION_STATUS.READ } },
+      { status: NOTIFICATION_STATUS.READ }
+    );
   }
 
   async getNotifications(userId) {
     let notifications = await redisService.getCachedNotifications(userId);
     if (!notifications) {
-      notifications = await Notification.find({ userId }).sort({
+      notifications = await this.notificationModel.find({ userId }).sort({
         timestamp: -1,
       });
       await redisService.cacheNotification({ userId, notifications });
@@ -58,4 +64,4 @@ class NotificationService {
   }
 }
 
-module.exports = new NotificationService();
+module.exports = new NotificationService(Notification);
