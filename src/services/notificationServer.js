@@ -4,9 +4,10 @@ const eventBus = require("../utils/eventBus");
 const { EVENT_BUS, NOTIFICATION_STATUS } = require("../config/constants");
 
 class NotificationService {
-  constructor(notificationModel) {
+  constructor(notificationModel, cacheService) {
     eventBus.on(EVENT_BUS.USER_CONNECTED, this.handleUserConnected.bind(this));
     this.notificationModel = notificationModel;
+    this.cacheService = cacheService;
   }
 
   async handleUserConnected(userId) {
@@ -33,7 +34,7 @@ class NotificationService {
     }
 
     await notification.save();
-    await redisService.cacheNotification(notification);
+    await this.cacheService.cacheNotification(notification);
     return sent;
   }
 
@@ -53,15 +54,15 @@ class NotificationService {
   }
 
   async getNotifications(userId) {
-    let notifications = await redisService.getCachedNotifications(userId);
+    let notifications = await this.cacheService.getCachedNotifications(userId);
     if (!notifications) {
       notifications = await this.notificationModel.find({ userId }).sort({
         timestamp: -1,
       });
-      await redisService.cacheNotification({ userId, notifications });
+      await this.cacheService.cacheNotification({ userId, notifications });
     }
     return notifications;
   }
 }
 
-module.exports = new NotificationService(Notification);
+module.exports = new NotificationService(Notification, redisService);
