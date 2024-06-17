@@ -25,8 +25,8 @@ class WebSocketService {
       }
 
       try {
-        const decoded = await this.verifyToken(token);
-        const userId = decoded.userId;
+        const { userId } = await this.verifyToken(token);
+
         await this.cacheService.storeClientConnection(userId);
         logger.info(`Client connected: ${userId}`);
 
@@ -48,9 +48,7 @@ class WebSocketService {
 
   getTokenFromHeaders(req) {
     const authHeader = req.headers["sec-websocket-protocol"];
-    if (!authHeader) {
-      return null;
-    }
+    if (!authHeader) return null;
     return authHeader;
   }
 
@@ -73,9 +71,7 @@ class WebSocketService {
   verifyToken(token) {
     return new Promise((resolve, reject) => {
       jwt.verify(token, JWT_SECRET, (err, decoded) => {
-        if (err) {
-          return reject(err);
-        }
+        if (err) return reject(err);
         resolve(decoded);
       });
     });
