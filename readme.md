@@ -126,6 +126,5 @@ You can find a Postman collection to test the API endpoints at the following lin
 
 ### Summary
 
-Anansi focuses on providing real-time WebSocket notifications with support for user authentication and delivery/read receipts. The project is designed to be scalable and decoupled, with an emphasis on WebSocket functionality over overall API architecture.
+Anansi focuses on providing real-time WebSocket notifications with support for user authentication and delivery/read receipts. The project is designed to be decoupled, with an emphasis on WebSocket functionality over overall API architecture.
 
-By following this setup, you can easily run and test the Anansi notification service and integrate it into your applications.
