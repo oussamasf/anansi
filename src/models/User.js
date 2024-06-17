@@ -11,6 +11,11 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+
+  topics: {
+    type: [String],
+    default: ["topic1", "topic2"],
+  },
 });
 
 userSchema.pre("save", async function (next) {
