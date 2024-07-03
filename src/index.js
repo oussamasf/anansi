@@ -1,32 +1,34 @@
-const express = require("express");
-const { PORT, WS_PORT } = require("./config");
-const logger = require("./utils/Logger");
-const connectDB = require("./utils/db");
-const notificationController = require("./controllers/notificationsController");
-const authController = require("./controllers/authController");
-const webSocketService = require("./services/webSocketService");
+const { io } = require("socket.io-client");
 
-const app = express();
-app.use(express.json());
+const JWT =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVlZGUzYjBhMzRhMmMxNzlkZTZlMTQ4YiIsInJvbGVzIjpbImFjdGl2ZUNsaWVudCIsImFkbWluIiwiYWxleGFuZHJpZVdyaXRlciIsImRlcGFydG1lbnRNYW5hZ2VyIl0sImlhdCI6MTcwNDgxMTMxNH0.DmNicve2CTBzA27KcDHczYoHSILQTx4L1ZMr3Qz9Uio";
 
-//? Connect to MongoDB
-connectDB();
-
-//? Start WebSocket Server
-webSocketService.start(WS_PORT);
-
-//? Authentication routes
-app.post("/register", (req, res) => authController.register(req, res));
-app.post("/login", (req, res) => authController.login(req, res));
-
-//? Notification routes (secured)
-app.post("/notify", (req, res) =>
-  notificationController.sendNotification(req, res)
-);
-app.get("/notifications/:userId", (req, res) =>
-  notificationController.fetchNotifications(req, res)
-);
-
-app.listen(PORT, () => {
-  logger.info(`Notification Service running on port ${PORT}`);
+const socket = io("http://localhost:4000/client", {
+  transports: ["websocket"],
+  extraHeaders: {
+    authorization: JWT,
+  },
 });
+
+// Log when connected
+socket.on("connect", () => {
+  console.log("Successfully connected to the server");
+});
+
+// Log when disconnected
+socket.on("disconnect", () => {
+  console.log("Disconnected from the server");
+});
+
+// Log connection errors
+socket.on("connect_error", (error) => {
+  console.error("Connection error:", error);
+});
+
+// Log received notifications
+socket.on("notification", (message) => {
+  console.log(`Message from user1 ${JSON.stringify(message)}`);
+});
+
+// Emit a notification
+socket.emit("notification", " some8");
