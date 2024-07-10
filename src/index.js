@@ -3,7 +3,7 @@ const { io } = require("socket.io-client");
 const JWT =
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVlZGUzYjBhMzRhMmMxNzlkZTZlMTQ4YiIsInJvbGVzIjpbImFjdGl2ZUNsaWVudCIsImFkbWluIiwiYWxleGFuZHJpZVdyaXRlciIsImRlcGFydG1lbnRNYW5hZ2VyIl0sImlhdCI6MTcwNDgxMTMxNH0.DmNicve2CTBzA27KcDHczYoHSILQTx4L1ZMr3Qz9Uio";
 
-const socket = io("https://client.legal-doctrine.io/client", {
+const socket = io("http://localhost:7654/client", {
   transports: ["websocket"],
   extraHeaders: {
     authorization: JWT,

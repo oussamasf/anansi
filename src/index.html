@@ -8,11 +8,13 @@
     document.addEventListener("DOMContentLoaded", () => {
       const JWT =
         "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVlZGUzYjBhMzRhMmMxNzlkZTZlMTQ4YiIsInJvbGVzIjpbImFjdGl2ZUNsaWVudCIsImFkbWluIiwiYWxleGFuZHJpZVdyaXRlciIsImRlcGFydG1lbnRNYW5hZ2VyIl0sImlhdCI6MTcwNDgxMTMxNH0.DmNicve2CTBzA27KcDHczYoHSILQTx4L1ZMr3Qz9Uio";
-      const socket = io("https://client.legal-doctrine.io/client", {
+      const socket = io("http://localhost:7654/client", {
         transports: ["websocket"],
-        auth: {
-          token: JWT
-        }
+        withCredentials: true,
+        auth: { token: JWT },
+        extraHeaders: {
+          authorization: JWT,
+        },
       });
 
       socket.on('connect', () => {
@@ -22,12 +24,22 @@
       socket.on('connect_error', (err) => {
         console.error('Connection error:', err);
       });
+
+      document.getElementById('notifyButton').addEventListener('click', () => {
+        const notificationData = {
+          title: 'Test Notification',
+          message: 'This is a test notification.'
+        };
+        socket.emit('notification', notificationData);
+        console.log('Notification sent:', notificationData);
+      });
     });
   </script>
 </head>
 
 <body>
   <h1>Socket.IO CORS Test</h1>
+  <button id="notifyButton">Send Notification</button>
 </body>
 
 </html>
